@@ -121,9 +121,9 @@ components:
           type: string
           description: The isCompleted of the Todo.
           example: 'false'
-        dueDate:
+        dueDate2:
           type: string
-          description: The dueDate of the Todo.
+          description: The dueDate2 of the Todo.
           example: ''
       required:
         - id
