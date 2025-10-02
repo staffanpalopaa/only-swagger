@@ -94,7 +94,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Todo'
+                  $ref: '#/components/schemas/GetAllTodosResponse'
         '400':
           $ref: '#/components/responses/BadRequest'
 components:
@@ -121,6 +121,10 @@ components:
           type: string
           description: The isCompleted of the Todo.
           example: 'false'
+        dueDate:
+          type: string
+          description: The dueDate of the Todo.
+          example: ''
       required:
         - id
         - description
@@ -148,6 +152,22 @@ components:
           example: todo-abc-123
       required:
         - id
+    GetAllTodosResponse:
+      type: object
+      description: Response schema for the Get All Todos query.
+      properties:
+        id:
+          type: string
+          description: The id of the Todo.
+          example: todo-abc-123
+        description:
+          type: string
+          description: The description of the Todo.
+          example: Plan weekend trip
+        isCompleted:
+          type: string
+          description: The isCompleted of the Todo.
+          example: 'false'
   parameters:
     TodoId:
       name: id
